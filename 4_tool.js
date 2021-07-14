@@ -20,7 +20,9 @@
  
  // 発言(Toot)する 
  M.post('statuses', 
+   // 発言する内容
    {status: 'TEST TEST TEST by cli'},
+   // エラーの場合の処理
    (err, data, res) => {
      if (err) {
        console.error(err)
